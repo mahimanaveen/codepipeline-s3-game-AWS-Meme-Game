@@ -22,8 +22,8 @@ body {
 }
 
 .card {
-    min-width: 150px; /* Ensures cards don't shrink too small */
-    width: 150px; /* Fixed width for now to avoid layout issues */
+    min-width: 100px; /* Ensures cards don't shrink too small */
+    width: 100px; /* Fixed width for now to avoid layout issues */
     height: 100px; /* Fixed height */
     background-color: #565c6f;
     border-radius: 10px;
