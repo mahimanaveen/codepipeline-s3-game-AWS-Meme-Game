@@ -8,18 +8,20 @@ body {
 }
 
 .container {
-    display: flex; /* or grid if preferred */
-    flex-wrap: wrap; /* Ensures cards will wrap to a new line if needed */
-    justify-content: center; /* Centers the cards */
+    display: flex;
+    flex-wrap: wrap; /* Ensures cards will wrap */
+    justify-content: center;
     align-items: center;
     max-width: 100%; /* Ensures the container takes up available width */
-    overflow: hidden; /* Adjust to 'auto' or 'scroll' if you need scrolling */
     padding: 10px;
     box-sizing: border-box; /* Includes padding in the element’s width and height */
+    overflow-x: auto; /* Enables horizontal scrolling if necessary */
+    overflow-y: auto; /* Enables vertical scrolling if necessary */
 }
+
 .card {
-    width: 150px; /* Reduce the width */
-    height: 100px; /* Reduce the height */
+    width: calc(20% - 20px); /* Responsive card width, adjust for gaps */
+    height: 150px; /* Set the height */
     background-color: #565c6f;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -28,9 +30,8 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    margin: 10px; /* Add space between cards */
+    margin: 10px;
 }
-
 
 h1 {
     color: white; 
@@ -44,14 +45,12 @@ h1 {
 
 #game-board {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(5, 1fr); /* Grid of 5 columns */
+    grid-template-rows: repeat(2, 1fr); /* Grid of 2 rows */
     gap: 20px;
     justify-content: center;
     padding: 20px;
 }
-
-
 
 .card img {
     width: 100%;
@@ -62,10 +61,6 @@ h1 {
 
 .card.show img {
     visibility: visible; /* Show image when card is flipped */
-}
-.container {
-    overflow-x: auto; /* Enables horizontal scrolling if cards overflow */
-    overflow-y: auto; /* Enables vertical scrolling */
 }
 
 #start-game {
